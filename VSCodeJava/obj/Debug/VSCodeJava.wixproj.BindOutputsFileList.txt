@@ -1,0 +1,2 @@
+E:\Softwares\VS\VSCodeJava\VSCodeJava\bin\Debug\VSCodeJava.exe
+E:\Softwares\VS\VSCodeJava\VSCodeJava\bin\Debug\VSCodeJava.wixpdb

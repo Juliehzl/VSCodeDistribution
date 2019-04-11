@@ -1,0 +1,6 @@
+E:\Softwares\VS\VSCodeJava\VSCodeJava\bin\Debug\VSCodeJava.exe
+E:\Softwares\VS\VSCodeJava\VSCodeJava\bin\Debug\VSCodeJava.wixpdb
+obj\Debug\Bundle.wixobj
+obj\Debug\VSCodeJava.wixproj.BindContentsFileList.txt
+obj\Debug\VSCodeJava.wixproj.BindOutputsFileList.txt
+obj\Debug\VSCodeJava.wixproj.BindBuiltOutputsFileList.txt

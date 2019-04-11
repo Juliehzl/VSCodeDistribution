@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-	<Bundle Name="VSCodeJava" Version="1.0.0.0" Manufacturer="" UpgradeCode="ed2a3815-00ea-4181-b190-ecba4e69959c">
+	<Bundle Name="VSCodeJava" Version="1.0.0.0" Manufacturer="Zunli" UpgradeCode="ed2a3815-00ea-4181-b190-ecba4e69959c">
 		<BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLicense" />
 
 		<Chain>
