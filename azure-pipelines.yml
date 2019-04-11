@@ -29,9 +29,12 @@ steps:
     configuration: '$(buildConfiguration)'
     msbuildArgs: '/p:AppxBundlePlatforms="$(buildPlatform)" /p:AppxPackageDir="$(appxPackageDir)" /p:AppxBundle=Always /p:UapAppxPackageBuildMode=StoreUpload'
 
-- task: DownloadBuildArtifacts@0
+- task: CopyFiles@2
   inputs:
-    buildType: 'current'
-    downloadType: 'single'
-    artifactName: 'drop'
-    downloadPath: '$(System.ArtifactsDirectory)'
+    sourceFolder: '$(Build.SourcesDirectory)'
+    contents: '**/$(BuildConfiguration)/**/?(*.exe|*.dll|*.pdb)'
+    
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: drop
