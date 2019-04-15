@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:util="http://schemas.microsoft.com/wix/UtilExtension" >
 	<Bundle Name="VSCodeJava" Version="1.0.0.0" Manufacturer="Zunli" UpgradeCode="ed2a3815-00ea-4181-b190-ecba4e69959c">
 		<BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLicense" />
-
+    
 		<Chain>
 			<!-- TODO: Define the list of chained packages. -->
 			<!-- <MsiPackage SourceFile="path\to\your.msi" /> -->
-      <ExePackage SourceFile="VSCodeSetup-x64-1.33.0.exe" />
+      <PackageGroupRef Id="VSCodeSetup"/>
       
-      <MsiPackage SourceFile="OpenJDK8U-jdk_x64_windows_hotspot_8u202b08.msi" />
-        
+      <!-- <ExePackage SourceFile="VSCodeSetup-x64-1.33.0.exe" /> -->
+      <!-- <MsiPackage SourceFile="OpenJDK8U-jdk_x64_windows_hotspot_8u202b08.msi" /> -->
 		</Chain>
+    
 	</Bundle>
+  <Fragment>
+    <util:RegistrySearch 
+      Id="VSCodeFound"
+      Root="HKLM"
+      Key="SOFTWARE\Classes\Applications\Code.exe"
+      Result="exists" 
+      Variable="VSCodeFound"/>
+
+    <PackageGroup Id="VSCodeSetup">
+      <ExePackage
+        Id="VSCodeSetup"
+        SourceFile="VSCodeSetup-x64-1.33.0.exe"
+        DetectCondition="VSCodeFound" 
+        InstallCommand="/s"/>
+    </PackageGroup>
+
+  </Fragment>
 </Wix>
