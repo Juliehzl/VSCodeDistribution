@@ -1,2 +1,1 @@
 E:\Softwares\VS\VSCodeJava\VSCodeJava\VSCodeSetup-x64-1.33.0.exe
-E:\Softwares\VS\VSCodeJava\VSCodeJava\OpenJDK8U-jdk_x64_windows_hotspot_8u202b08.msi
