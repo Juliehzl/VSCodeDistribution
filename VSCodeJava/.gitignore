@@ -1,2 +1,3 @@
-VSCodeJava/obj/*
-VSCodeJava/bin/Debug/*
+VSCodeJava/obj/
+VSCodeJava/bin/Debug/
+.vs/
